@@ -158,4 +158,32 @@ section.task-list {
       }
     } 
   }
+
+  @media screen and (max-width: 1184px) {
+    margin: -10rem 2rem 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    header {
+      flex-direction: column;
+
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 70px 30px;
+
+    header {
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      .input-group input {
+        width: 100%;
+      }
+    }
+  }
 }
