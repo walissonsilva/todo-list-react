@@ -26,3 +26,5 @@ A fim de praticar alguns conceitos adicionais do Desenvolvimento Front-End, adic
 ### 2. Alerta (Toast) de Tarefa Vazia
 
 Foi passado que a tarefa não deveria ser adicionada, caso fosse vazia. Sendo assim, adicionei um Toast para notificar ao usuário que tarefas vazias não podem ser adicionadas, visando uma melhoria na experiência do usuário (UX). O resultado pode ser conferido no gif apresentado na própria seção **Funcionamento da Aplicação**.
+
+> OBS.: Este recurso está disponível apenas na branch `feature/add-toast`.
