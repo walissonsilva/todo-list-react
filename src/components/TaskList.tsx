@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useToasts } from 'react-toast-notifications';
 
 import '../styles/tasklist.scss'
 
@@ -14,6 +15,8 @@ export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
+  const { addToast } = useToasts();
+
   function handleCreateNewTask() {
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
     if (newTaskTitle) {
@@ -28,7 +31,7 @@ export function TaskList() {
 
       setNewTaskTitle('');
     } else {
-      console.log('Não é possível adicionar uma tarefa vazia.');
+      addToast('Não é possível adicionar uma tarefa vazia.', {appearance: 'error'});
     }
   }
 

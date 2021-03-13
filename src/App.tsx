@@ -1,13 +1,19 @@
 import { TaskList } from './components/TaskList'
 import { Header } from "./components/Header";
-import './styles/global.scss'
+import { DefaultToast, ToastProvider } from 'react-toast-notifications';
 
+import './styles/global.scss'
 
 export function App() {
   return (
-    <>
-      <Header />
-      <TaskList />
-    </>
+    <ToastProvider
+    autoDismiss
+    autoDismissTimeout={5000}
+    components={{ Toast: DefaultToast }}
+    placement="top-right"
+  >
+    <Header />
+    <TaskList />
+  </ToastProvider>
   )
 }
